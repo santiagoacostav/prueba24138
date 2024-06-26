@@ -1,8 +1,9 @@
 import express from 'express';
+import 'dotenv/config';
 import rutasProductos from './routes/rutas.productos.js';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
